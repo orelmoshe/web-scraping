@@ -1,0 +1,25 @@
+.table-container {
+  display: flex;
+  flex-direction: column;
+}
+.table-container > b {
+  justify-content: center;
+}
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.i {
+  margin-right: 30px;
+}
+
+.actor-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.img-actor {
+  margin-left: 30px;
+}

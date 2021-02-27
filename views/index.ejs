@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Cinematech</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.0.js"></script>
+		<link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/index.css" />
+	</head>
+
+	<body>
+		<div class="title">
+			<h1 class="title-page">Cinematech</h1>
+		</div>
+
+		<form method="GET" action="/search">
+				<div class="input-group mb-3" style="width: 80%; margin: auto">
+					<input name="nameMovie" type="text" class="form-control" placeholder="New movie search" />
+					<div class="input-group-append">
+						<button class="btn btn-success" type="submit">Go</button>
+					</div>
+				</div>
+			</form>
+
+		<div class="movies">
+			<% for (let movie of movies) { %>
+			<div class="movie">
+				<a href="/search?nameMovie=<%= movie.nameMovie%>"> <img class="photo" src="<%= movie.urlPhoto%>" width="200" height="300" /></a>
+				<a href="/search?nameMovie=<%= movie.nameMovie%>" class="name-movie"><%= movie.nameMovie%></a>
+			</div>
+			<% } %>
+		</div>
+	</body>
+</html>
